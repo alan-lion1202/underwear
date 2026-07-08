@@ -271,6 +271,127 @@ select {
   gap: 18px;
 }
 
+.intelligenceSection {
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sectionLink,
+.sectionMeta {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.insightGrid,
+.brandLearningGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.insightCard,
+.brandLearningCard,
+.opportunityCard {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px;
+}
+
+.insightTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.insightTop h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.insightTop span,
+.recommendationBadge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  border-radius: 999px;
+  padding: 3px 9px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.insightCard p {
+  margin: 0;
+  color: #4b5668;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.miniInfo,
+.miniMetric {
+  display: grid;
+  gap: 5px;
+}
+
+.miniInfo span,
+.miniMetric span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.miniInfo strong {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.opportunityList {
+  display: grid;
+  gap: 10px;
+}
+
+.opportunityCard {
+  grid-template-columns: minmax(180px, 1.2fr) minmax(130px, 0.8fr) repeat(3, minmax(120px, 0.75fr)) minmax(170px, 0.9fr);
+  align-items: center;
+}
+
+.opportunityMain {
+  display: grid;
+  gap: 5px;
+}
+
+.opportunityMain span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .leadCardGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -839,6 +960,30 @@ tr:last-child td {
   line-height: 1.55;
 }
 
+.sourceStack {
+  display: grid;
+  gap: 8px;
+}
+
+.benchmarkList {
+  display: grid;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.benchmarkRow {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 120px 140px 140px minmax(260px, 1.4fr);
+  gap: 10px;
+  min-width: 860px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  color: #4b5668;
+  font-size: 13px;
+}
+
 .scoreCell {
   display: grid;
   grid-template-columns: minmax(70px, 1fr) 32px;
@@ -897,8 +1042,14 @@ tr:last-child td {
   .contentGrid,
   .chartGrid,
   .leadCardGrid,
-  .detailGrid {
+  .detailGrid,
+  .insightGrid,
+  .brandLearningGrid {
     grid-template-columns: 1fr;
+  }
+
+  .opportunityCard {
+    grid-template-columns: 1fr 1fr;
   }
 
   .detailPanel.wide {
@@ -913,7 +1064,8 @@ tr:last-child td {
 
   .pageHeader,
   .tableTop,
-  .chartHeader {
+  .chartHeader,
+  .sectionHeader {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -933,5 +1085,9 @@ tr:last-child td {
 
   .headerMetric {
     width: 100%;
+  }
+
+  .opportunityCard {
+    grid-template-columns: 1fr;
   }
 }
