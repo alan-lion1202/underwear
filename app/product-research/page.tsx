@@ -67,7 +67,7 @@ export default function ProductResearchPage() {
           </div>
         )}
         columns={[
-          { key: "product", label: "Product 产品", render: (row) => isKnown(row.productUrl) ? <Link className="sourceLink" href={row.productUrl} target="_blank" rel="noreferrer">{row.product}</Link> : row.product },
+          { key: "product", label: "Product 产品", render: (row) => <Link className="sourceLink" href={`/product-research/${row.id}`}>{row.product}</Link> },
           { key: "brand", label: "Brand 品牌", render: (row) => <Link className="sourceLink" href={`/brand-database/${row.brandSlug}`}>{row.brand}</Link> },
           { key: "category", label: "Category 品类" },
           { key: "targetUser", label: "Target User 目标用户" },
